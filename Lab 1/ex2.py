@@ -10,4 +10,4 @@ def vowels(cadena):
 	
 	return count
 
-print "Hay", vowels("Hola me llamo Jesus"), "en la frase Hola me llamo Jesus"
+print "Hay", vowels("Hola me llamo Jesus"), "vocales en la frase Hola me llamo Jesus"
