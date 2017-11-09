@@ -1,4 +1,4 @@
-# Statements
+# Lab 1
 1.  Find the largest common divisor of multiple numbers. Define a function with variable number of parameters to resolve this.    
 2.	Write a function that calculates how many vowels are in a string.  
 3.	Write a function that returns the number of words that exist in a string. Words are separated by spaces, punctuation marks (, ;, ? ! . )  

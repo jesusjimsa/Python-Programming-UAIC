@@ -1,4 +1,4 @@
-# Statements
+# Lab 2
 1.	Write a function to return a list of the first n numbers in the Fibonacci string.
 2.	Write a function that receives a list of numbers and returns a list of the prime numbers found in it.
 3.	Let a tuple (x, y) represent a point in a Cartesian system. Write a function that receives as a parameter a list of points and returns a list of unique tuples (a, b, c) representing the unique lines determined by those points ((a, b, c) corresponds to the right ax + by +c  = 0).
