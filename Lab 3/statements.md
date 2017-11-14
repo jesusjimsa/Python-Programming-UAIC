@@ -4,7 +4,7 @@
 2. Write a function that receives a string as a parameter and returns a dictionary in which the keys are the characters in the character string and the values are the number of occurrences of that character in the given text.  
 Example: For string "Ana has apples." given as a parameter the function will return the dictionary: {'A': 1, '': 2, 'n': 1, 'a': 2, 'r': 2, '.': 1}.
 
-3. Compare two dictionaries without using the operator "==" and return a list of differences as follows: (Attention, dictionaries must be recursively covered because they can contain other containers, such as dictionaries, lists, sets, etc.)
+3. Compare two dictionaries without using the operator "==" and return a list of differences as follows: {common keys but with different values, the keys that are only found in the first dict, the keys that are only found in the second dict} (Attention, dictionaries must be recursively covered because they can contain other containers, such as dictionaries, lists, sets, etc.)
 
 4. The build_xml_element function receives the following parameters: tag, content, and key-value elements given as name-parameters. Build and return a string that represents the corresponding XML element. Example: build_xml_element ("a", "Hello there", "href =" http://python.org ", _class =" my-link " //python.org \ "_class = \" my-link \ "id = \" someid \ "> Hello there </a>"
 
