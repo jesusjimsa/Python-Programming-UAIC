@@ -16,7 +16,7 @@ d) a * b
 
 6. Write a script that receives 3 parameters from the console. The first one will be a path to a file, the second a path to a directory and the third will be the size of a buffer. Script will copy the given file as a parameter into the given directory as a parameter, using a buffer of the third parameter size, in bytes.
 
-7. Create your own module in which to implement at least 3 functions. Use these functions in a script.
+7. Create your own module in which to implement at least 3 functions. Use these functions in a script.
 
 8. Write a script that takes the following arguments: path, tree_depth, filesize, filecount, dircount and create a directory structure deep depth as follows: starting from the root path will be created dircount filecount directories and files containing filesize bytes (only the "a" character for example) and this process will be repeated recursively for each created directory until the desired depth is reached (no directories will be created in the directories at maximum adacity)  
 For example, if we run the script like this: ```python3 create_dummy_tree.py test 2 1024 3 3``` the following structure will be created in the current directory:  
@@ -31,17 +31,17 @@ For example, if we run the script like this: ```python3 create_dummy_tree.py tes
     test / dir1 / file1 (size 1024)
     test / dir1 / file2 (size 1024)
     test / dir1 / file3 (size 1024)
-
+
     test / dir2
     test / dir2 / file1 (size 1024)
     test / dir2 / file2 (size 1024)
     test / dir2 / file3 (size 1024)
-
+
     test / file0 (size 1024)
     test / file1 (size 1024)
     test / file2 (size 1024)
 ```
-
+
 9. Create a script that displays the following system information:  
 - Python version used. If Python 2 is used, Python 2 will also display the "=== Python 2 ===" message, and if Python 3 is used, it will display the "Running under Py3" message (hint: sys.version_info)
 - The name of the user who executed the script
