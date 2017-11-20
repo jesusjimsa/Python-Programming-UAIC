@@ -1,7 +1,7 @@
 # Lab 4
 
 1. Write a python program to receive two numbers from the command line (a and b) and display:  
-a) a-b  
+a) a - b  
 b) a + b  
 c) a / b  
 d) a * b  
