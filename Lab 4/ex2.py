@@ -15,9 +15,11 @@ elif os.path.isfile(pathFD):
 		fd = open(pathFD, mode = 'r')
 	except IOError:
 		print "Could not open file"
+		sys.exit()
 	try:
 		print fd.read(4096)
 	except IOError:
 		print "Could not read file"
+		sys.exit()
 else:
 	print "The path is not valid"
