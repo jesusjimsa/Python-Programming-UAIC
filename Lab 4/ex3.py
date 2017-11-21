@@ -6,10 +6,18 @@ import os
 #import pdb; pdb.set_trace()
 
 filename = raw_input("Enter the name of a file: ")
-fd = open(filename, mode = 'w')
+
+try:
+	fd = open(filename, mode = 'w')
+except IOError:
+	print "Could not open file"
 
 for a in os.environ:
 	entry = a + "\t" + os.environ[a] + "\n"
-	fd.write(entry)
+
+	try:
+		fd.write(entry)
+	except IOError:
+		print "Could not write in the file"
 
 fd.close()
