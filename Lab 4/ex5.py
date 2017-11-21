@@ -40,3 +40,5 @@ for root, directories, filenames in os.walk(directory):
 			except IOError:
 				print "Unable to write in", entries
 				sys.exit()
+
+fd.close()
