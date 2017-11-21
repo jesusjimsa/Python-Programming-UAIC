@@ -10,9 +10,9 @@ d) a * b
 
 3. Write a function that receives a filename as a parameter and writes the data from the os.environ in the file, each line containing an entry in this dictionary, in the form of the key [tab] value.
 
-4. Write a function that receives as a parameter a path that represents a directory on the system, recursively browses the file structure and directories that it contains and displays in the console all the paths it has traveled. You are NOT allowed to use os.walk.
+4. Write a function that receives as a parameter a path that represents a directory on the system, recursively browses the file structure and directories that it contains and displays in the console all the paths it has travelled. You are NOT allowed to use os.walk.
 
-5. Write a script that receives 2 parameters from the console representing a path to a directory on the system and a file name. The script will recursively navigate to the file structure and directories in the given directory as a parameter using os.walk and write the file given as a parameter all sites path you traveled and it's type (FILE, DIRECTORY, UNKNOWN), separated by |. Each path will be written on one line.
+5. Write a script that receives 2 parameters from the console representing a path to a directory on the system and a file name. The script will recursively navigate to the file structure and directories in the given directory as a parameter using os.walk and write in the file given as a parameter all sites path you travelled and it's type (FILE, DIRECTORY, UNKNOWN), separated by |. Each path will be written on one line.
 
 6. Write a script that receives 3 parameters from the console. The first one will be a path to a file, the second a path to a directory and the third will be the size of a buffer. Script will copy the given file as a parameter into the given directory as a parameter, using a buffer of the third parameter size, in bytes.
 
