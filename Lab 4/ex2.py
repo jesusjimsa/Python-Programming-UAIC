@@ -3,7 +3,7 @@
 # a file, it's entries if the path is a directory and an error
 # message if the path is not a valid one.
 
-import os
+import os, sys
 #import pdb; pdb.set_trace()
 
 pathFD = raw_input("Write a path: ")
@@ -23,3 +23,5 @@ elif os.path.isfile(pathFD):
 		sys.exit()
 else:
 	print "The path is not valid"
+
+fd.close()
