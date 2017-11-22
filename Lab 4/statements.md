@@ -18,7 +18,7 @@ d) a * b
 
 7. Create your own module in which to implement at least 3 functions. Use these functions in a script.
 
-8. Write a script that takes the following arguments: path, tree_depth, filesize, filecount, dircount and create a directory structure deep depth as follows: starting from the root path will be created dircount filecount directories and files containing filesize bytes (only the "a" character for example) and this process will be repeated recursively for each created directory until the desired depth is reached (no directories will be created in the directories at maximum adacity)  
+8. Write a script that takes the following arguments: path, tree_depth, filesize, filecount, dircount and create a directory structure deep depth as follows: starting from the root path will be created dircount filecount directories and files containing filesize bytes (only the "a" character for example) and this process will be repeated recursively for each created directory until the desired depth is reached (in directories at the maximum depth, no other directories will be created)  
 For example, if we run the script like this: ```python3 create_dummy_tree.py test 2 1024 3 3``` the following structure will be created in the current directory:  
 ```
     test
