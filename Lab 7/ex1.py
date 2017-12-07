@@ -12,4 +12,4 @@ start_time = time.time()
 while True:
 	time.sleep(random.randint(a, b))
 	
-	print ((time.time() - start_time) / 60), "minutes"
+	print "{:.2f}".format(((time.time() - start_time) / 60)), "minutes"
