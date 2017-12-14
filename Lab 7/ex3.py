@@ -23,6 +23,9 @@ def hashfile(path, blocksize = 65536):
 def findDup(parentFolder):
 	# Dups in format {hash:[names]}
 	dups = {}
+	fd = open("output.txt", "w")
+
+	fd.write("Duplicated files\n")
 
 	for dirName, subdirs, fileList in os.walk(parentFolder):
 		#print('Scanning %s...' % dirName)
@@ -36,7 +39,9 @@ def findDup(parentFolder):
 
 			# Add or append the file path
 			if file_hash in dups:
-				dups[file_hash].append(path)
+				#entry = str(hola[a])
+				fd.write(path)
+				fd.write("\n")
 			else:
 				dups[file_hash] = [path]
 
@@ -47,12 +52,3 @@ start_time = time.time()
 hola = findDup(sys.argv[1])
 
 print("--- %s seconds ---" % (time.time() - start_time))
-
-fd = open("output.txt", "w")
-
-fd.write("Duplicated files\n")
-
-for a in hola:
-	entry = str(hola[a])
-	fd.write(entry)
-	fd.write("\n")
