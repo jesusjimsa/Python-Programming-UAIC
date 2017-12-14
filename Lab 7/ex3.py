@@ -53,5 +53,6 @@ fd = open("output.txt", "w")
 fd.write("Duplicated files\n")
 
 for a in hola:
-	fd.write(a)
+	entry = str(hola[a])
+	fd.write(entry)
 	fd.write("\n")
