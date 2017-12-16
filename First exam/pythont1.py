@@ -37,7 +37,7 @@ def problema5(my_list):
 	for a in my_list:
 		if my_list.count(a) == 2:
 			repeated.append(a)
-	
+		
 	return repeated
 
 # def problema6(folder, file):
