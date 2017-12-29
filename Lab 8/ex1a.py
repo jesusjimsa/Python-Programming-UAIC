@@ -9,7 +9,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(("127.0.0.1", 2024))
 s.listen(1)
 
-while(True):
+while True:
 	print "Waiting for a client..."
 	(connection, address) = s.accept()
 
