@@ -7,6 +7,7 @@ import sys
 
 if len(sys.argv) < 2:
 	print "You have to provide the webpage"
+	exit()
 
 images_list = list()
 image_name = 0
