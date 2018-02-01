@@ -25,7 +25,7 @@ def filesToJson(directory):
 			absolute = os.path.abspath(entry)
 
 			d = {"file_name": file_name, "md5_file": md5_file, "sha256_file": sha256_file, "size_file": size_file, "creation": creation, "absolute": absolute}
-			s = json.dumps(d)
+			s = json.dumps(d, indent = 4)
 			open("file_info.json","wt").write(s)
 
 filesToJson("/Users/jesusjimsa/Dropbox/Documentos/Universidad/3 - Primer cuatrimestre/Python Programming/Prácticas/Lab 1")
