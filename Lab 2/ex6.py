@@ -6,29 +6,30 @@
 # and 4, 2 is in list 1 and 2, 3 is in lists 1 and 2, 4 is in
 # lists 2 and 3.
 
+
 def xTimes(x, *lists):
-	times = dict()
-	timesList = list()
+    times = dict()
+    timesList = list()
 
-	for a in lists:
-		for b in a:
-			if b in times:
-				times[b] += 1
-			else:
-				times[b] = 1
-	
-	auxTimes = dict(times)
+    for a in lists:
+        for b in a:
+            if b in times:
+                times[b] += 1
+            else:
+                times[b] = 1
 
-	for c in times:
-		if times[c] != x:
-			del auxTimes[c]
+    auxTimes = dict(times)
 
-	times = dict(auxTimes)
+    for c in times:
+        if times[c] != x:
+            del auxTimes[c]
 
-	for d in times:
-		timesList.append(d)
-	
-	return timesList
+    times = dict(auxTimes)
+
+    for d in times:
+        timesList.append(d)
+
+    return timesList
 
 
-print xTimes(2, [1,2,3], [2,3,4], [4,5,6], [4,1, "test"])
+print(xTimes(2, [1,2,3], [2,3,4], [4,5,6], [4,1, "test"]))

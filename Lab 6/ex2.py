@@ -4,10 +4,9 @@
 
 import re
 
-#import pdb; pdb.set_trace()
 
 def regex_text_number(regex, text, number):
-	expression = regex + "{" + str(number) + "}"
-	return re.findall(expression, text)
+    expression = regex + "{" + str(number) + "}"
+    return re.findall(expression, text)
 
-print regex_text_number("\d", "Hola, tengo 3 anios y 5389 cabras", 4)
+print(regex_text_number("\d", "Hola, tengo 3 anios y 5389 cabras", 4))

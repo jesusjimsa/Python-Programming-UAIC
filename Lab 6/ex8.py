@@ -3,17 +3,19 @@
 # contains a string that matches the same expression. Files that satisfy
 # both conditions will be prefixed with ">>"
 
-import os, sys, re
+import os
+import re
+
 
 def fileMatches(directory, regex):
-	for root, directories, filenames in os.walk(directory):
-		for directory in directories:
-			print directory
-		for filename in filenames:
-			if re.match(regex, filename):
-				print ">>" + filename
-			else:
-				print filename
+    for _, directories, filenames in os.walk(directory):
+        for directory in directories:
+            print(directory)
+        for filename in filenames:
+            if re.match(regex, filename):
+                print(">>" + filename)
+            else:
+                print(filename)
 
 
-fileMatches("/Users/jesusjimsa/Dropbox/Documentos/Universidad", "[a-zA-Z]*\d[a-zA-Z]*")
+fileMatches("/Users/jesusjimsa/Dropbox/Documentos/Universidad", r"[a-zA-Z]*\d[a-zA-Z]*")

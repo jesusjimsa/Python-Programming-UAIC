@@ -5,9 +5,11 @@
 # href="http://python.org", _class="my-link", id="someid") =>
 # "<a href=\"http://python.org\" _class=\"my-link\" id=\"someid\">Hello there</a>"
 
+
 def build_xml_element(tag, content, href, clas, idd):
-	result = "<" + tag + " href=\"" + href + "\" _class=\"" + clas + "\" id=\"" + idd + "\">" + content + "</" + tag + ">"
+    result = "<" + tag + " href=\"" + href + "\" _class=\"" + clas + "\" id=\"" + idd + "\">" + content + "</" + tag + ">"
 
-	return result
+    return result
 
-print build_xml_element("a", "Hello there", "http://python.org", "my-link", "someid")
+
+print(build_xml_element("a", "Hello there", "http://python.org", "my-link", "someid"))

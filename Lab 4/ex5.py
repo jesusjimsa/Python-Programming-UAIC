@@ -6,39 +6,40 @@
 # (FILE, DIRECTORY, UNKNOWN), separated by |.
 # Each path will be written on one line.
 
-import os, sys
+import os
+import sys
 
 directory = raw_input("Write a path: ")
 entries = raw_input("Write the name of the new file: ")
 
 try:
-	fd = open(entries, mode = "w")
+    fd = open(entries, mode='w')
 except IOError:
-	print "Error creating or openin the file", entries
-	sys.exit()
+    print("Error creating or openin the file", entries)
+    sys.exit()
 
 for root, directories, filenames in os.walk(directory):
-	for directory in directories:
-		to_write = os.path.join(root, directory) + " | DIRECTORY\n"
-		try:
-			fd.write(to_write)
-		except IOError:
-			print "Unable to write in", entries
-			sys.exit()
-	for filename in filenames:
-		if os.path.isfile(filename):
-			to_write = os.path.join(root,filename) + " | FILE\n"
-			try:
-				fd.write(to_write)
-			except IOError:
-				print "Unable to write in", entries
-				sys.exit()
-		else:
-			to_write = os.path.join(root,filename) + " | UNKNOWN\n"
-			try:
-				fd.write(to_write)
-			except IOError:
-				print "Unable to write in", entries
-				sys.exit()
+    for directory in directories:
+        to_write = os.path.join(root, directory) + " | DIRECTORY\n"
+        try:
+            fd.write(to_write)
+        except IOError:
+            print("Unable to write in", entries)
+            sys.exit()
+    for filename in filenames:
+        if os.path.isfile(filename):
+            to_write = os.path.join(root, filename) + " | FILE\n"
+            try:
+                fd.write(to_write)
+            except IOError:
+                print("Unable to write in", entries)
+                sys.exit()
+        else:
+            to_write = os.path.join(root, filename) + " | UNKNOWN\n"
+            try:
+                fd.write(to_write)
+            except IOError:
+                print("Unable to write in", entries)
+                sys.exit()
 
 fd.close()

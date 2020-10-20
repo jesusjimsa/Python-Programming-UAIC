@@ -3,11 +3,13 @@
 # tuple. Example: [("abc", "bcd"), ("abc", "zza")] ==>
 # [("abc", "zza"), ("abc", "bcd")]
 
+
 def weirdOrder(list_of_tuples):
-	ordered = list(list_of_tuples)
+    ordered = list(list_of_tuples)
 
-	ordered.sort(key = lambda a: a[1][2])	# Order by the 3rd character in the 2nd element of each tuple
+    ordered.sort(key = lambda a: a[1][2])   # Order by the 3rd character in the 2nd element of each tuple
 
-	return ordered
+    return ordered
 
-print weirdOrder([("abc", "bcd"), ("abc", "zza")])
+
+print(weirdOrder([("abc", "bcd"), ("abc", "zza")]))

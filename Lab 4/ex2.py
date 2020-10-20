@@ -3,25 +3,25 @@
 # a file, it's entries if the path is a directory and an error
 # message if the path is not a valid one.
 
-import os, sys
-#import pdb; pdb.set_trace()
+import os
+import sys
 
 pathFD = raw_input("Write a path: ")
 
 if os.path.isdir(pathFD):
-	print os.listdir(pathFD)
+    print(os.listdir(pathFD))
 elif os.path.isfile(pathFD):
-	try:
-		fd = open(pathFD, mode = 'r')
-	except IOError:
-		print "Could not open file"
-		sys.exit()
-	try:
-		print fd.read(4096)
-	except IOError:
-		print "Could not read file"
-		sys.exit()
+    try:
+        fd = open(pathFD, mode='r')
+    except IOError:
+        print("Could not open file")
+        sys.exit()
+    try:
+        print(fd.read(4096))
+    except IOError:
+        print("Could not read file")
+        sys.exit()
 else:
-	print "The path is not valid"
+    print("The path is not valid")
 
 fd.close()

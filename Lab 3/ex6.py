@@ -1,11 +1,11 @@
 # With the global dictionary:
 #
-#	{
-# 		"+": lambda a, b: a + b,
-# 		"*": lambda a, b: a * b,
-# 		"/": lambda a, b: a / b,
-# 		"%": lambda a, b: a % b
-# 	}
+# {
+#     "+": lambda a, b: a + b,
+#     "*": lambda a, b: a * b,
+#     "/": lambda a, b: a / b,
+#     "%": lambda a, b: a % b
+# }
 #
 # Build an apply_operator function (operator, a, b)
 # that will apply over a and b the rule specified
@@ -15,13 +15,15 @@
 
 
 global_dict = {
-	"+": lambda a, b: a + b,
-	"*": lambda a, b: a * b,
-	"/": lambda a, b: a / b,
-	"%": lambda a, b: a % b
+    "+": lambda a, b: a + b,
+    "*": lambda a, b: a * b,
+    "/": lambda a, b: a / b,
+    "%": lambda a, b: a % b
 }
 
-def apply_operator(operator, a, b):
-	return global_dict[operator](a, b)
 
-print apply_operator("*", 2, 2)
+def apply_operator(operator, a, b):
+    return global_dict[operator](a, b)
+
+
+print(apply_operator("*", 2, 2))

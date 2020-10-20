@@ -10,11 +10,11 @@ s.bind(("127.0.0.1", 2024))
 s.listen(1)
 
 while True:
-	print "Waiting for a client..."
-	(connection, address) = s.accept()
+    print("Waiting for a client...")
+    (connection, address) = s.accept()
 
-	print "Connect address:", address
-	print "Port: 2024"
-	print (time.strftime("%H:%M:%S")), (time.strftime("%d/%m/%Y"))
+    print("Connect address:", address)
+    print("Port: 2024")
+    print((time.strftime("%H:%M:%S")), (time.strftime("%d/%m/%Y")))
 
-	connection.close()
+    connection.close()

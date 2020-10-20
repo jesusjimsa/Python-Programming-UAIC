@@ -2,7 +2,6 @@
 # Access that server from a browser, and then using a python HTTP client
 # (urllib.request)
 
-import urllib2
 import SimpleHTTPServer
 import SocketServer
 

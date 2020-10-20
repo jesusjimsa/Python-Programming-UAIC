@@ -1,7 +1,8 @@
 # Name: Jesus Jimenez Sanchez
 
-import sys, os
-#import pdb; pdb.set_trace()
+import sys
+import os
+
 
 if sys.argv[0] == str(__file__):
 	print sys.argv[-1]
@@ -16,10 +17,10 @@ def problema3(n):
 
 	for digit in to_str:
 		suma += int(digit)
-	
+
 	for digit in to_str:
 		mult *= int(digit)
-	
+
 	return suma > mult
 
 def problema4(m):
@@ -37,13 +38,13 @@ def problema5(my_list):
 	for a in my_list:
 		if my_list.count(a) == 2:
 			repeated.append(a)
-		
+
 	return repeated
 
 # def problema6(folder, file):
 # 	if os.path.exists(folder):
 # 		try:
-# 			fd = open(file, mode = "w")
+# 			fd = open(file, mode='w')
 # 		except OSError:
 # 			print "Couldn't open/create", file
 # 			return None

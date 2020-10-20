@@ -5,15 +5,17 @@
 
 import re
 
-def listOfExpressions(characters, expressionsList):
-	solutions = dict()
 
-	for a in expressionsList:
-		solutions[a] = re.findall(a, characters)
-	
-	return solutions
+def listOfExpressions(characters, expressionsList):
+    solutions = dict()
+
+    for a in expressionsList:
+        solutions[a] = re.findall(a, characters)
+
+    return solutions
+
 
 chars = "ertyui 1 oknb 5 vcxpv 6 cdsrtyui 3 kbvd"
-expressions = ["\d", "\w+"]
+expressions = [r"\d", r"\w+"]
 
-print listOfExpressions(chars, expressions)
+print(listOfExpressions(chars, expressions))

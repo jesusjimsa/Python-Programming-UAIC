@@ -4,13 +4,14 @@
 
 import re
 
+
 def listOfWords(text):
-	#returns list of words in text
+    # returns list of words in text
 
-	# both do the same
-	#re.split("\W+", text)
+    # both do the same
+    # re.split("\W+", text)
 
-	return re.findall("(\w+)", text)
+    return re.findall(r"(\w+)", text)
 
 
-print listOfWords("Erase una vez")
+print(listOfWords("Erase una vez"))

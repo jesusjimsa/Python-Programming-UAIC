@@ -6,42 +6,42 @@ import re
 import sys
 
 if len(sys.argv) < 2:
-	print "You have to provide the webpage"
-	exit()
+    print("You have to provide the webpage")
+    exit()
 
 images_list = list()
 image_name = 0
 
 try:
-	url_direction = sys.argv[1]
-	webpage = urllib2.urlopen(url_direction).read()
+    url_direction = sys.argv[1]
+    webpage = urllib2.urlopen(url_direction).read()
 except Exception as e:
-	print "Error -->", e
-	exit()
+    print("Error -->", e)
+    exit()
 else:
-	print "Webpage opened correctly"
+    print("Webpage opened correctly")
 
 
-re_image = re.compile("(<img .* src=\")(.*\.jpg|.*\.png|.*\.tiff|.*\.jpeg|.*\.gif|.*\.bmp)(\".*)")
-re_extension = re.compile("(.*)(\.jpg|\.png|\.tiff|\.jpeg|\.gif|\.bmp)")
+re_image = re.compile(r"(<img .* src=\")(.*\.jpg|.*\.png|.*\.tiff|.*\.jpeg|.*\.gif|.*\.bmp)(\".*)")
+re_extension = re.compile(r"(.*)(\.jpg|\.png|\.tiff|\.jpeg|\.gif|\.bmp)")
 
 try:
-	for found in re_image.finditer(webpage):
-		image = found.group(2)
-		images_list.append(image)
+    for found in re_image.finditer(webpage):
+        image = found.group(2)
+        images_list.append(image)
 
-		print "\033[92mFound\033[0m", image
+        print("\033[92mFound\033[0m", image)
 
-		img_parts = re_extension.search(image)
-		img_extension = img_parts.group(2)
+        img_parts = re_extension.search(image)
+        img_extension = img_parts.group(2)
 
-		fd = open(str(image_name) + img_extension, "w+")
-		fd.write(urllib2.urlopen(image).read())
-		fd.close()
+        fd = open(str(image_name) + img_extension, "w+")
+        fd.write(urllib2.urlopen(image).read())
+        fd.close()
 
-		image_name += 1
+        image_name += 1
 except Exception as e:
-	print "Error -->", e
-	exit()
+    print("Error -->", e)
+    exit()
 else:
-	print len(images_list), "images found and downloaded"
+    print(len(images_list), "images found and downloaded")

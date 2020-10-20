@@ -3,22 +3,25 @@
 
 import time
 
+
 def prime1(num):
-	return all(num % i for i in xrange(2, num))
+    return all(num % i for i in xrange(2, num))
+
 
 def prime2(num):
-	solution = False
+    solution = False
 
-	if num > 1:
-		for i in range(2,num):
-			if (num % i) == 0:
-				solution = False
-			else:
-				solution = True
-	else:
-		solution = False
-	
-	return solution
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                solution = False
+            else:
+                solution = True
+    else:
+        solution = False
+
+    return solution
+
 
 start_time = time.time()
 

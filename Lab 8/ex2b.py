@@ -7,12 +7,12 @@ import sys
 import socket
 
 try:
-	addr = sys.argv[1]
-	port = int(sys.argv[2])
-	msg = sys.argv[3]
-except:
-	print "You need to write three arguments: <server_addres> <port> <message>"
-	sys.exit(1)
+    addr = sys.argv[1]
+    port = int(sys.argv[2])
+    msg = sys.argv[3]
+except OSError:
+    print("You need to write three arguments: <server_addres> <port> <message>")
+    sys.exit(1)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.sendto(msg, (addr, port))

@@ -5,7 +5,6 @@
 import socket
 import time
 import hashlib
-import sys
 
 addr = "127.0.0.1"
 port = 2024
@@ -22,7 +21,7 @@ md5 = hashlib.md5(data).hexdigest()
 sha256 = hashlib.sha256(data).hexdigest()
 
 fd.write("Message sent:\n")
-fd.write(data)
+fd.write(str(data))
 fd.write("\n\nDate and time:\n")
 fd.write(datetime)
 fd.write("\n\nAddress:\n")

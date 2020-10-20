@@ -2,7 +2,9 @@
 # seconds, where x is random chosen at each iteration (from the interval
 # [a, b], where a, b are arguments). The program will run infinitely.
 
-import time, sys, random
+import time
+import sys
+import random
 
 a = int(sys.argv[1])
 b = int(sys.argv[2])
@@ -10,6 +12,6 @@ b = int(sys.argv[2])
 start_time = time.time()
 
 while True:
-	time.sleep(random.randint(a, b))
-	
-	print "{:.2f}".format(((time.time() - start_time) / 60)), "minutes"
+    time.sleep(random.randint(a, b))
+
+    print("{:.2f}".format(((time.time() - start_time) / 60)), "minutes")

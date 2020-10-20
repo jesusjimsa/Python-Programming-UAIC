@@ -7,45 +7,48 @@ import sys
 import hashlib
 import time
 
-def hashfile(path, blocksize = 65536):
-	afile = open(path, 'rb')
-	hasher = hashlib.md5()
-	buf = afile.read(blocksize)
 
-	while len(buf) > 0:
-		hasher.update(buf)
-		buf = afile.read(blocksize)
+def hashfile(path, blocksize=65536):
+    afile = open(path, 'rb')
+    hasher = hashlib.md5()
+    buf = afile.read(blocksize)
 
-	afile.close()
+    while len(buf) > 0:
+        hasher.update(buf)
+        buf = afile.read(blocksize)
 
-	return hasher.hexdigest()
+    afile.close()
+
+    return hasher.hexdigest()
+
 
 def findDup(parentFolder):
-	# Dups in format {hash:[names]}
-	dups = {}
-	fd = open("output.txt", "w")
+    # Dups in format {hash:[names]}
+    dups = {}
+    fd = open("output.txt", "w")
 
-	fd.write("Duplicated files\n")
+    fd.write("Duplicated files\n")
 
-	for dirName, subdirs, fileList in os.walk(parentFolder):
-		#print('Scanning %s...' % dirName)
+    for dirName, _, fileList in os.walk(parentFolder):
+        # print('Scanning %s...' % dirName)
 
-		for filename in fileList:
-			# Get the path to the file
-			path = os.path.join(dirName, filename)
+        for filename in fileList:
+            # Get the path to the file
+            path = os.path.join(dirName, filename)
 
-			# Calculate hash
-			file_hash = hashfile(path)
+            # Calculate hash
+            file_hash = hashfile(path)
 
-			# Add or append the file path
-			if file_hash in dups:
-				#entry = str(hola[a])
-				fd.write(path)
-				fd.write("\n")
-			else:
-				dups[file_hash] = [path]
+            # Add or append the file path
+            if file_hash in dups:
+                # entry = str(hola[a])
+                fd.write(path)
+                fd.write("\n")
+            else:
+                dups[file_hash] = [path]
 
-	return dups
+    return dups
+
 
 start_time = time.time()
 
